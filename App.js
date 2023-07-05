@@ -1,27 +1,51 @@
- 
- // 1. create element/tag put sth in it (data) using react
-    // 2. create root from ReactDOM
-    // 3. render element inside root
-    const heading = React.createElement("h1", {id: "heading"}, "HEllow world from react ") 
-    //takes 3 args tag, obj, content of tag
-    //obj contains attributes to element
- 
-    //----------------------------------------
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./app.scss";
+// import FormVAlidationUsingLib from "./src/snippets/react_form/FormvalidationUsingLIB/FormVAlidationUsingLib";
+import {SwiggyLayout} from "./src/swiggy/SwiggyLayout";
+import { FormValidation } from "./src/snippets/react_form/formValidation";
+import { ComponentLifecycle } from "./src/interview/componentLifecycle";
+import { MediaQuery } from "./src/interview/MediaQuery";
 
-    //nested structure
+// const HeadingComponent = () => {
+//   return <h1>Namaste react component</h1>;
+// };
 
-    //v.imp 
-    // ReactElement(object) => HTML(Browser understands)
-    //parent here is object
-    const parent = React.createElement('div',{id: "parent"},
-    React.createElement('div',{id: "child"},
-  [  
-    React.createElement('h1',{},"Hello I'm H1 tag inside child"),
-    React.createElement('h2',{},"Hello I'm H2 tag inside child"),
+// function HeadingComponent2() {
+//   return (
+//     <>
+//       <HeadingComponent />
+//       Namaste react component 2
+//     </>
+//   );
+// }
+// root.render(<FormVAlidationUsingLib />);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<ComponentLifecycle/>);
+root.render(<MediaQuery/>);
 
-])
-    )
 
-    const root  = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(<SwiggyLayout />);
+root.render(<FormValidation />);
 
-    root.render(parent);
+//---------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
